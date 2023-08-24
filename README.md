@@ -1,1 +1,1 @@
-# SCY
+# SCY_JAVA
