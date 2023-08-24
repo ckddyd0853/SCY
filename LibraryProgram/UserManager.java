@@ -61,6 +61,6 @@ public class UserManager {
 
 	@Override
 	public String toString() {
-		return "[ ¼ºÇÔ: " + name + " " + "]"  + " " + "[" + "¿¬¶ôÃ³: "  + tel + " " + "]" + " " + "[" + "ÀÌ¸ŞÀÏ: "  + email + " " + "]"; 
+		return "[ ì„±í•¨: " + name + " " + "]"  + " " + "[" + "ì—°ë½ì²˜: "  + tel + " " + "]" + " " + "[" + "ì´ë©”ì¼: "  + email + " " + "]"; 
 	}
 }
