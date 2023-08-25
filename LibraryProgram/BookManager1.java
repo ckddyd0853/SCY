@@ -1,12 +1,12 @@
 package LibraryProgram;
 
-public class BookManager1 {
+public class BookManager {
 	
 	private String bookname;
 	public String loan;
 	public String loanname;
 	
-	public BookManager1(String bookname, String loan, String loanname) {
+	public BookManager(String bookname, String loan, String loanname) {
 		
 		super();
 		
@@ -50,4 +50,3 @@ public class BookManager1 {
 	
 	
 }
-
