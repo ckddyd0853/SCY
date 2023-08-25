@@ -1,22 +1,19 @@
 package LibraryProgram;
 import java.util.Scanner;
-import java.util.Collections;
-import java.util.List;
 
-import LibraryProgram.BookManager1;
 import LibraryProgram.UserManager;
 
 import java.util.ArrayList;
-import java.util.Collection;
+import LibraryProgram.Book;
 
 public class User {
+	
 	
 	static ArrayList<UserManager> users = new ArrayList<UserManager>();
 	
 	static Scanner sc = new Scanner(System.in);
 	
 	static int n = 0;
-	static int n1 = 0;
 	
 	public static void Customer (){ 
 		System.out.println();
@@ -129,7 +126,7 @@ public class User {
 
 			case 5:
 				run2 = false;
-				System.out.println("메인메뉴로 돌아갑니다.");
+				System.out.println("프로그램이 종료되었습니다.");
 				break;
 
 			default:
@@ -140,90 +137,6 @@ public class User {
 
 		}
 	}
-	
-	// -------------------- 도서 관리 ---------------------
-	
-
-		
-		static Scanner booksc = new Scanner(System.in);
-		
-		static ArrayList<BookManager1> books = new ArrayList<BookManager1>();
-		
-		
-		public static void Bookreg() {
-			System.out.println("등록할 도서의 이름을 입력하세요.");
-			System.out.println("---------------------");
-			
-			System.out.print("책 이름: ");
-			String bookname = booksc.next();
-			books.add(new BookManager1("JAVA", "대출 가능", "없음"));
-			books.add(new BookManager1("C++", "대출 가능", "없음"));
-			books.add(new BookManager1("JSP", "대출 가능", "없음"));
-			books.add(new BookManager1(bookname, "대출 가능", "없음"));
-			
-			System.out.println("등록 되었습니다!");
-		}
-		
-		public static void Bookloan() {
-			System.out.println();
-			
-			System.out.print(">>>대출자 명: ");
-			String loan = booksc.next();
-			
-			System.out.print(">>>찾는 도서명: ");
-			String loanname = booksc.next();
-			
-			System.out.println(">>>대출완료!!");
-			
-		}
-		
-		public static void BookList() {
-			System.out.println();
-			for (BookManager1 books : books) {
-				System.out.println(books);
-			}
-		}
-		
-		public static void BookProgram() {
-			Boolean run3 = true;
-			while (run3) {
-				System.out.println("--------------------------------------------------------------------------------------------");
-				System.out.println("|   1. 도서 등록   |   2. 대출   |   3. 반납   |   4. 도서리스트   |   5. 메인 메뉴");
-				System.out.println("--------------------------------------------------------------------------------------------");
-				System.out.print("메뉴를 선택하세요.");
-				n1 = sc.nextInt();
-
-				switch (n1) {
-				
-				case 1: // 고객 등록 메소드
-					Bookreg();
-					break;
-
-				case 2: // 고객 대출 메소드
-					
-					break;
-
-				case 3: // 고객 반납 메소드
-					
-					break;
-
-				case 4: // 도서리스트 메소드
-					BookList();
-					break;
-
-				case 5:
-					run3 = false;
-					System.out.println("메인메뉴로 돌아갑니다.");
-					break;
-
-				default:
-					System.out.println("1 ~ 5 까지의 숫자만 입력하세요.");
-					break;
-
-				}
-
-			}
-		}
 	
 	public static void main(String[] args) {
 		Boolean run = true;
@@ -243,8 +156,8 @@ public class User {
 		}
 		
 		case 2: {
-			BookProgram();
-			break;			
+			Book book = new Book();
+			book.BookProgram();
 		}
 		
 		case 3:
